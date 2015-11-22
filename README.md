@@ -1,3 +1,3 @@
-# Ashlyn's-Template
+# Portfolio
 
-This is a basic angular template I like to use. It is a custom version of Yeoman with a focus on Heroku deployment with node.js.
+This is my personal site. Feel free to clone and push it yourself ;)
