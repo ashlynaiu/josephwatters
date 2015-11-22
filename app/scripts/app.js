@@ -1,29 +1,29 @@
 'use strict';
-
 /**
  * @ngdoc overview
- * @name ashlynTemplate
+ * @name portfolio
  * @description
- * # ashlynTemplate
  *
  * Main module of the application.
  */
 angular
-  .module('ashlynTemplate', [
+  .module('portfolio', [
     'ngAnimate',
     'ngSanitize',
     'ngTouch',
-    'ui.router'
+    'ui.router',
+    'yaru22.md',
+    'hljs'
   ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
-
     $urlRouterProvider.otherwise('/');
     $stateProvider
       .state ('frame', {
         abstract: true,
         url: '/',
-        templateUrl: 'views/frame.html'
+        templateUrl: 'views/frame.html',
+        controller: 'FrameCtrl'
       })
       .state ('navigation', {
         abstract: true,
@@ -35,7 +35,31 @@ angular
         parent: 'frame',
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
-      });
+      })
+      .state('code', {
+        url: 'code',
+        templateUrl: 'views/code.html',
+        parent: 'frame',
+        controller: 'CodeCtrl'
+      })
+      .state('projects', {
+        url: 'projects',
+        templateUrl: 'views/projects.html',
+        parent: 'frame',
+        controller: 'ProjectsCtrl'
+      })
+      .state('about', {
+        url: 'about',
+        templateUrl: 'views/about.html',
+        parent: 'frame',
+        // controller: 'AboutCtrl'
+      })
+      .state('log', {
+        url: 'log',
+        templateUrl: 'views/log.html',
+        parent: 'frame',
+        controller: 'LogCtrl'
+      }); 
   }).run(function($rootScope){
   $rootScope.$on('$stateChangeSuccess', function() {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
