@@ -12,12 +12,14 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.router',
-    'yaru22.md',
     'hljs'
   ])
-  .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $locationProvider, hljsServiceProvider) {
     $locationProvider.html5Mode(true);
     $urlRouterProvider.otherwise('/');
+    hljsServiceProvider.setOptions({
+      tabReplace: '    '
+    });
     $stateProvider
       .state ('frame', {
         abstract: true,

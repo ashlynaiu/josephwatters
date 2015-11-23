@@ -22,7 +22,6 @@ module.exports = function(config) {
       'bower_components/jquery/dist/jquery.js',
       'bower_components/angular/angular.js',
       'bower_components/angular-animate/angular-animate.js',
-      'bower_components/angular-highlightjs/build/angular-highlightjs.js',
       'bower_components/angular-sanitize/angular-sanitize.js',
       'bower_components/showdown/dist/showdown.js',
       'bower_components/angular-markdown-directive/markdown.js',
