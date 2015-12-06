@@ -38,11 +38,11 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .state('code', {
-        url: 'code',
-        templateUrl: 'views/code.html',
+      .state('demos', {
+        url: 'demos',
+        templateUrl: 'views/demos.html',
         parent: 'frame',
-        controller: 'CodeCtrl'
+        controller: 'DemosCtrl'
       })
       .state('projects', {
         url: 'projects',
@@ -60,7 +60,7 @@ angular
         url: 'log',
         templateUrl: 'views/log.html',
         parent: 'frame',
-        controller: 'LogCtrl'
+        // controller: 'LogCtrl'
       }); 
   }).run(function($rootScope){
   $rootScope.$on('$stateChangeSuccess', function() {
