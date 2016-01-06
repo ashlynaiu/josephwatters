@@ -1,0 +1,23 @@
+<div>
+<h2>Easy rules for using Sessions instead of Cookies</h2>
+
+<h3>Use sessions when:</h3>
+<ul>
+	<li>You want to store data on your server and not on the user's browser.</li>
+	<li>The data is only relevant to the current session.</li>
+	<li>The data isn't sensitive or does not need to be a secret.</li>
+</ul>
+
+<h3>Captcha Example</h3>
+<pre><code><hljs>
+	session_start();
+	$captchaWord = $_SESSION["captchaWord"];
+	$captcha = $_POST["captcha"];
+
+	if (strcmp($captcha, $catpchaWord)) {
+		// bot
+	} else {
+		// human
+	}
+</hljs></code></pre>
+</div>
