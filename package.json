@@ -3,14 +3,11 @@
   "version": "0.0.1",
   "main": "app.js",
   "dependencies": {
-    "angular-highlightjs": "^0.5.1",
     "connect-modrewrite": "^0.8.1",
     "ejs": "^2.3.3",
     "express": "^4.13.1",
     "express-logger": "0.0.3",
-    "gzippo": "^0.2.0",
-    "highlight.js": "^8.9.1",
-    "marked": "^0.3.5"
+    "gzippo": "^0.2.0"
   },
   "repository": {},
   "devDependencies": {
