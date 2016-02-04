@@ -1,27 +1,27 @@
+<!-- <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script> -->
 <div>
 <h2>Best Damn Lambda Explaination</h2>
-<p>Simply put, lambda functions are anonymous functions. They can be used anywhere a function can be used. They can be assigned to variables.</p>
+<p>Simply put, lambda functions are anonymous functions. They can both be used anywhere a function can be used and can be assigned to a variable. That's it! Well, for an explaination. Usage is a little tricky. So let's take a look at how we can use lambda functions.</p>
 
 <p>When we create a lambda function without assignment or execution we are just creating a place in memory for that funciton.</p>
 
-<div hljs hljs-lang="python">
-    >>> lambda x: x+1
-    <function <lambda> at 0x104191c80>
-</div>
+<pre class="prettyprint">
+>>> lambda x: x + 1
+</pre>
 
-<p>A lambda function in the raw can be read "lambda inputParameter: expression to evaulate on inputparameter". When assigned to a variable that variable is then treated like reference to a function and can be utilized the same way as a function.</p>
+<p>A lambda function in contains all of the aspects of a regular function. If we assign our function to a variable</p>
 
-<pre><code><hljs>
+<pre class="prettyprint">
 >>> f = lambda x: x+1
 >>> f(1)
 2
-</hljs></code></pre>
+</pre>
 
 <p>If you are looking to evaluate inline, without assignment, then the declaration of the lamba function and the input value are wrapped in parenthesis side-by-side.</p>
 
-<pre><code><hljs>
+<pre class="prettyprint">
 >>> (lambda x: x+1)(1)
 2
-</hljs></code></pre>
+</pre>
 
 </div>
