@@ -1,3 +1,4 @@
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
 <div>
 <h2>Easy rules for using Sessions instead of Cookies</h2>
 
@@ -9,15 +10,15 @@
 </ul>
 
 <h3>Captcha Example</h3>
-<pre><code><hljs>
-	session_start();
-	$captchaWord = $_SESSION["captchaWord"];
-	$captcha = $_POST["captcha"];
+<pre class="prettyprint">
+session_start();
+$captchaWord = $_SESSION["captchaWord"];
+$captcha = $_POST["captcha"];
 
-	if (strcmp($captcha, $catpchaWord)) {
-		// bot
-	} else {
-		// human
-	}
-</hljs></code></pre>
+if (strcmp($captcha, $catpchaWord)) {
+	// bot
+} else {
+	// human
+}
+</pre>
 </div>
