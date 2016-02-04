@@ -11,15 +11,11 @@ angular
     'ngAnimate',
     'ngSanitize',
     'ngTouch',
-    'ui.router',
-    'hljs'
+    'ui.router'
   ])
-  .config(function ($stateProvider, $urlRouterProvider, $locationProvider, hljsServiceProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
     $urlRouterProvider.otherwise('/');
-    hljsServiceProvider.setOptions({
-      tabReplace: '    '
-    });
     $stateProvider
       .state ('frame', {
         abstract: true,
