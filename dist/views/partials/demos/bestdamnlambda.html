@@ -1,0 +1,28 @@
+<!-- <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script> -->
+<div>
+<h2>Best Damn Lambda Explaination</h2>
+<p>Simply put, lambda functions are anonymous functions. They can both be used anywhere a function can be used and can be assigned to a variable. That's it! Well, for an explaination. Usage is a little tricky. So let's take a look at how we can use lambda functions.</p>
+
+<p>When we create a lambda function without assignment or execution we are just creating a place in memory for that funciton.</p>
+
+<pre class="prettyprint">
+>>> lambda x: x + 1
+</pre>
+
+<p>A lambda function contains all of the aspects of a regular function. We can assign our function to a variable. It can then be used like any other function.</p>
+
+<pre class="prettyprint">
+>>> f = lambda x: x+1
+>>> f(1)
+2
+</pre>
+
+<p>If you are looking to evaluate the function inline, without assignment, then the declaration of the lamba function and the input value are wrapped in parenthesis side-by-side.</p>
+
+<pre class="prettyprint">
+>>> (lambda x: x+1)(1)
+2
+</pre>
+
+<p>That's it! Where lambda function start to shine are when they are combined with built-in functions.</p>
+</div>

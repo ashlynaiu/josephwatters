@@ -1,0 +1,31 @@
+<div>
+<h2>One Line Wonders with Python</h2>
+<p>
+    Python has a variety of built-in functions that are like a swiss army knife in the hands of a junior developer, but can become a Yearning Mithril Greatsword in the hands of the learned.
+</p>
+<h3>Sorting</h3>
+<p>Say we have an array of dictionaries. Each dictionary has two indicies; name and count. Our task is to return those dictionaries sorted by the count index of each item. An acceptable solution might be:</p>
+<pre class="prettyprint">
+def sort_fruit(unsorted_fruit):
+    count_reference_dict = {}
+    sorted_fruit = []
+    list_to_sort = []
+
+    for fruit in unsorted_fruit:
+        count_reference_dict[fruit['count']] = fruit
+        list_to_sort.append(fruit['count'])
+    
+    list_to_sort.sort()
+
+    for count in list_to_sort:
+        sorted_fruit.append(count_reference_dict[count])
+
+    return sorted_fruit
+</pre>
+<p>A better solution would be to use the built-in sorted function.</p>
+<pre class="prettyprint">
+def sort_fruit(unsorted_fruit):
+    return sorted(unsorted_fruit, key=lambda k: k['count'])
+</pre>
+<p>Sorted is well documented, but has a misleading "key" parameter. You might think that is referring to some key in a dictionary, but it infact acts as the function in which the sorting function is using to extract the comparison key for sorting.</p>
+</div>
